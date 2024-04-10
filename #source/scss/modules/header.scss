@@ -1,0 +1,21 @@
+header {
+	// height: 18.5dvh;
+	display: flex;
+	align-items: center;
+	@media (min-width: 1921px) {
+		height: 18.5dvh;
+        min-height: 18.5dvh;
+	}
+	@media (min-width: 1400px) and (max-width: 1920px) {
+		height: 16.5dvh;
+        min-height: 12.5dvh;
+	}
+	@media (min-width: 992px) and (max-width: 1399px) {
+		height: 13dvh;
+        min-height: 13dvh;
+	}
+    @media (max-width: 991px) {
+        min-height: 150px;
+        height: 150px;
+    }
+}

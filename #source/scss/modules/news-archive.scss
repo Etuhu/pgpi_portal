@@ -1,0 +1,79 @@
+.news-widget + .news-archive-wrapper {
+    margin-top: 5%;
+}
+
+.news-archive-wrapper {
+    .title-wrapper {
+        padding-left: 45px;
+        @media (max-width: 1920px) {
+            padding-left: 25px;
+        }
+        @media (max-width: 1799px) {
+            padding-left: 15px;
+        }
+        @media (max-width: 1499px) {
+            padding-left: 10px;
+        }
+        @media (max-width: 1399px) {
+            padding-left: 0;
+        }
+        .section-title {
+            line-height: 1;
+            padding-left: 10px;
+            border-left: 2px solid var(--yellow);
+        }
+    }
+    .archive-item {
+        @media (max-width: 1399px) {
+            margin-bottom: 20px;
+        }
+        @media (max-width: 1199px) {
+            margin-bottom: 30px;
+        }
+        .archive-item-content {
+            padding: 35px 45px;
+            @media (max-width: 1920px) {
+                padding: 25px;
+            }
+            @media (max-width: 1799px) {
+                padding: 15px;
+            }
+            @media (max-width: 1499px) {
+                padding: 10px;
+            }
+            @media (max-width: 1399px) {
+                padding: 0;
+            }
+            a {
+                color: var(--dark);
+                &:hover {
+                    color: var(--yellow);
+                }
+            }
+            .archive-item-date {
+                font-size: 0.75rem;
+                line-height: 1;
+                margin-bottom: 15px;
+                @media (max-width: 1199px) {
+                    margin-bottom: 10px;
+                }
+            }
+            .archive-item-title {
+                font-size: 1.2rem;
+                font-weight: 400;
+                line-height: 1;
+                @media (max-width: 1920px) {
+                    font-size: 1.1rem;
+                }
+                @media (max-width: 1399px) {
+                    font-size: 1rem;
+                }
+            }
+            .archive-item-link {
+                font-size: 0.75rem;
+                line-height: 1.2;
+                text-decoration-line: underline;
+            }
+        }
+    }
+}
