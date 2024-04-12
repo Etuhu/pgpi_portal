@@ -1,0 +1,26 @@
+.pagination-wrapper {
+    height: 60px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    // width: 96%;
+    // left: 2%;
+    .nav-links {
+        a, span {
+            color: rgb(214, 210, 196);
+            font-weight: 700;
+            font-size: 0.9rem;
+            padding-left: 10px;
+            padding-right: 10px;
+            @media (max-width: 1399px) {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
+        a:hover {
+            color: var(--yellow);
+        }
+        .current {
+            color: inherit;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.text-content {
+    p {
+        line-height: 1.4;
+    }
+
+    p, span, li {
+        font-size: clamp(0.9rem, 0.5994rem + 0.3130vw, 1rem);
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.scrollable .text-content {
+    padding-right: 20px;
+}

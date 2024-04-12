@@ -1,0 +1,20 @@
+.news-item-page {
+	.news-item-date {
+		margin-bottom: 2rem;
+        @media (max-width: 1399px) {
+            margin-bottom: 1.5rem;
+        }
+	}
+	.news-item-title {
+        font-size: clamp(1.6rem, -1.4050rem + 2.5039vw, 1.8rem);
+        font-weight: 400;
+        line-height: 1;
+        margin-bottom: 2rem;
+        @media (max-width: 1399px) {
+            margin-bottom: 1.5rem;
+        }
+	}
+	.news-item-content {
+
+	}
+}

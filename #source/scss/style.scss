@@ -4,7 +4,11 @@
 @import "modules/custom.scss";
 @import "modules/animation.scss";
 
+@import "modules/text-content.scss";
+@import "modules/breadcrumb.scss";
+@import "modules/pagination.scss";
 @import "modules/scrollbar.scss";
+@import "modules/inner-page.scss";
 @import "modules/overlay-menu.scss";
 @import "modules/header.scss";
 @import "modules/user-block.scss";
@@ -12,5 +16,7 @@
 @import "modules/sidebar-info.scss";
 @import "modules/form.scss";
 @import "modules/news-widget.scss";
-@import "modules/news-archive.scss";
+@import "modules/news-archive-widget.scss";
 @import "modules/news.scss";
+@import "modules/news-item-page.scss";
+@import "modules/news-archive-page.scss";

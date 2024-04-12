@@ -1,0 +1,14 @@
+.news-page .left-border-title {
+  margin-bottom: 2rem;
+}
+@media (max-width: 1920px) {
+  .news-page .left-border-title {
+    margin-bottom: 1.5rem;
+  }
+}
+.news-page .news-archive-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/*# sourceMappingURL=news-archive-page.css.map */

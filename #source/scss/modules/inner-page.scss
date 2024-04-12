@@ -1,0 +1,33 @@
+.inner-page {
+    .scroll-wrapper {
+        overflow: auto;
+        height: calc(65dvh - 60px);
+        @media (min-width: 1921px) {
+            @media (max-height: 1199px) {
+                height: calc(62dvh - 60px);
+            }
+            @media (max-height: 1080px) {
+                height: calc(60dvh - 60px);
+            }
+        }
+        @media (min-width: 1700px) and (max-width: 1920px) {
+            @media (max-height: 1080px) {
+                height: calc(65dvh - 60px);
+            }
+            @media (max-height: 900px) {
+                height: calc(62dvh - 60px);
+            }
+            @media (max-height: 800px) {
+                height: calc(60dvh - 60px);
+            }
+        }
+    }
+    .page-content {
+        position: relative;
+        overflow: hidden;
+        height: 75dvh;
+        .pagination-wrapper {
+            border-top: 5px solid var(--yellow);
+        }
+    }
+}
