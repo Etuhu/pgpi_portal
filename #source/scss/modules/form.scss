@@ -5,7 +5,8 @@ form {
         text-align: center;
         font-weight: 500;
         background-color: var(--yellow);
-        font-size: 1.2rem;
+        // font-size: 1.2rem;
+        font-size: clamp(1rem, 0.3987rem + 0.6260vw, 1.2rem);
         padding: 7.5% 6%;
         line-height: 1;
         margin-bottom: 0;
@@ -29,6 +30,12 @@ form {
         @media (max-width: 1920px) {
             height: 40px;
             padding: 8px;
+        }
+        @media (max-width: 1599px) {
+            height: 35px;
+        }
+        @media (max-width: 1399px) {
+            height: 30px;
         }
     }
     input[type=text],
@@ -62,6 +69,13 @@ form {
         box-sizing: border-box;
         border: 1px solid rgb(42, 44, 43);
         border-radius: 4px;
+        @media (max-width: 1499px) {
+            width: 15px;
+            height: 15px;
+            margin: 0 5px 0 0;
+            border-radius: 2px;
+
+        }
     }
 
     /* Checked */
@@ -104,7 +118,8 @@ form {
         margin-bottom: 0;
         height: 50px;
         color: var(--dark);
-        font-size: 0.9rem;
+        // font-size: 0.9rem;
+        font-size: clamp(0.7rem, 0.0987rem + 0.6260vw, 0.9rem);
         font-weight: 500;
         line-height: 1;
         @media (max-width: 1920px) {
@@ -117,7 +132,8 @@ form {
             height: 36px;
         }
         &::placeholder {
-            font-size: 0.9rem;
+            // font-size: 0.9rem;
+            font-size: clamp(0.7rem, 0.0987rem + 0.6260vw, 0.9rem);
             font-weight: 500;
             line-height: 1;
         }
