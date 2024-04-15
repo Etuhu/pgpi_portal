@@ -1,0 +1,59 @@
+.department-list {
+    list-style: none;
+    margin-top: 2rem;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.department-member {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+    @media (min-width: 1400px) and (max-width: 1920px) {
+        width: 33.3%;
+    }
+    @media (max-width: 991px) {
+        margin-bottom: 2rem;
+    }
+    .member-info {
+        padding-left: 20px;
+        @media (max-width: 1920px) {
+            padding-left: 15px;
+        }
+    }
+    .member-pic {
+        @media (max-width: 1599px) {
+            width: 80px;
+            height: 80px;
+        }
+        @media (max-width: 1199px) {
+            width: 70px;
+            height: 70px;
+        }
+        @media (max-width: 991px) {
+            width: 60px;
+            height: 60px;
+        }
+    }
+    .member-title {
+        text-transform: uppercase;
+        font-size: clamp(0.9rem, 0.5998rem + 0.3125vw, 1rem);
+        line-height: 1.2;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        @media (max-width: 1920px) {
+            margin-bottom: 10px;
+        }
+        a {
+            color: var(--dark);
+            &:hover {
+                color: var(--yellow);
+            }
+        }
+    }
+    .member-post {
+        line-height: 1.2;
+        font-weight: 400;
+        font-size: clamp(0.7rem, 0.3998rem + 0.3125vw, 0.8rem);
+    }
+}

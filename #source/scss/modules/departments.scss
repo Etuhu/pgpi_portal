@@ -46,17 +46,6 @@
                 transition: 0.35s ease;
             }
         }
-        .department-content-header {
-            padding: 10px 20px;
-            border-bottom: 2px solid var(--yellow);
-            font-size: clamp(1.1rem, 0.7994rem + 0.313vw, 1.2rem);
-            font-weight: 700;
-            line-height: 1;
-            @media (max-width: 1599px) {
-                padding-left: 0;
-                padding-right: 0;
-            }
-        }
         .department-list {
             padding: 0;
             padding-left: 20px;
@@ -96,4 +85,58 @@
             }
         }
 	}
+}
+
+.sidebar--departments {
+    .sidebar-content {
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0);
+        padding-top: 3.5rem;
+    }
+    .departments-list {
+        list-style-type: none;
+        margin-bottom: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        @media (max-width: 1599px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .departments-list-item-title {
+            margin-bottom: 1rem;
+            font-size: 0.8rem;
+            font-weight: 400;
+            line-height: 1;
+        }
+    }
+    .title-wrapper {
+        margin-bottom: 0.8rem;
+        @media (max-width: 1599px) {
+            margin-bottom: 0;
+        }
+    }
+}
+.sidebar--departments.sidebar--managers {
+    .sidebar-content {
+        padding-top: 11rem;
+    }
+    .managers-list {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        @media (max-width: 1599px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .department-member {
+            width: 100%;
+            margin-bottom: 2rem;
+            .member-pic {
+                @media (max-width: 1599px) {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+        }
+    }
 }

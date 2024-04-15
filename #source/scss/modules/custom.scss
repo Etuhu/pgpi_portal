@@ -488,3 +488,16 @@ main {
     margin-top: 0;
     margin-bottom: 0;
 }
+
+
+.page-content-header {
+    padding: 10px 20px;
+    border-bottom: 2px solid var(--yellow);
+    font-size: clamp(1.1rem, 0.7994rem + 0.313vw, 1.2rem);
+    font-weight: 700;
+    line-height: 1;
+    @media (max-width: 1599px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

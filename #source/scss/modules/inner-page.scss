@@ -1,6 +1,7 @@
 .inner-page {
     .scroll-wrapper {
-        overflow: auto;
+        // overflow: auto;
+        overflow-x: hidden;
         height: calc(65dvh - 60px);
         @media (min-width: 1921px) {
             @media (max-height: 1199px) {
