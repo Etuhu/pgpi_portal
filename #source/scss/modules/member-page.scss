@@ -2,4 +2,39 @@
     .sidebar--departments.sidebar--managers .sidebar-content {
         padding-top: 3.5rem;
     }
+    .member-page-content {
+        align-items: flex-start;
+        .member-image {
+            @media (min-width: 768px) {
+                position: sticky;
+                top: 0;
+            }
+            @media (max-width: 767px) {
+                margin-bottom: 2rem;
+            }
+        }
+        .member-name {
+            text-transform: uppercase;
+            font-size: clamp(1.1rem, 0.7994rem + 0.3130vw, 1.2rem);
+            font-weight: 700;
+            max-width: 55%;
+            margin-top: 0;
+        }
+        .member-link {
+            display: block;
+            width: fit-content;
+            color: inherit;
+            &:hover {
+                color: var(--yellow);
+            }
+        }
+        :is(.member-name, .member-post, .member-direction, .member-link) {
+            margin-bottom: 1rem;
+        }
+        .member-description {
+            :is(p, ul, ol):last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
 }

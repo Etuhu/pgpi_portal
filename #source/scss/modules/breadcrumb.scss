@@ -73,5 +73,10 @@
   }
 
   .breadcrumb {
-    gap: 8px;
+    gap: 0 8px;
+  }
+
+  .breadcrumbs__item,
+  .breadcrumbs__divider {
+    line-height: 1;
   }

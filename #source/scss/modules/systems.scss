@@ -1,0 +1,26 @@
+.systems-list {
+    padding-right: 20px;
+}
+.systems-item {
+    margin-bottom: 5rem;
+    @media (max-width: 1399px) {
+        margin-bottom: 4rem;
+    }
+    @media (max-width: 1199px) {
+        margin-bottom: 3rem;
+    }
+}
+.systems-item-title {
+    padding-left: 10px;
+    border-left: 3px solid var(--yellow);
+    font-size: clamp(1.1rem, 0.7994rem + 0.3130vw, 1.2rem);
+    line-height: 1;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    a {
+        color: inherit;
+        &:hover {
+            color: var(--yellow);
+        }
+    }
+}
