@@ -38,6 +38,66 @@ Array.prototype.forEach.call(
     })
 );
 
+//Поиск и фильтрация на странице Базы знаний
+var options = {
+    valueNames: [ 'base-item' ],
+    // page: 6,
+    // pagination: true
+};
+
+var baseDocList = new List('base-list', options);
+
+new Swiper(".video-swiper", {
+	slidesPerView: 4,
+	slidesPerGroup: 1,
+	speed: 500,
+	simulateTouch: true,
+	spaceBetween: 15,
+	watchOverflow: true,
+	touchReleaseOnEdges: true,
+	breakpoints: {
+		300: {
+			slidesPerView: 1,
+		},
+		576: {
+			slidesPerView: 1,
+		},
+		768: {
+			slidesPerView: 2,
+		},
+		992: {
+			slidesPerView: 2,
+		},
+		1200: {
+			slidesPerView: 3,
+		},
+		1400: {
+			slidesPerView: 3,
+		},
+		1600: {
+			slidesPerView: 3,
+		},
+		1921: {
+			slidesPerView: 4,
+		},
+	},
+});
+
+//Управление видео на странице с видоматериалами
+let feedbackVideoWrappers = document.querySelectorAll(".item-video-wrapper");
+if (feedbackVideoWrappers.length > 0) {
+    feedbackVideoWrappers.forEach(function(feedbackVideoWrapper, index){
+        let feedbackVideoButton = feedbackVideoWrapper.querySelector(".item-video-button");
+        let feedbackVideo = feedbackVideoWrapper.querySelector("video");
+        let feedbackPoster = feedbackVideoWrapper.querySelector(".item-video-poster");
+        feedbackVideoButton.addEventListener("click", function () {
+            feedbackVideoButton.classList.add("d-none");
+            feedbackPoster.classList.add("d-none");
+            feedbackVideo.play();
+        });
+    });
+};
+
 // (function ($bs) {
 //     $bs.Dropdown.prototype.toggle = function (_orginal) {
 //         return function () {

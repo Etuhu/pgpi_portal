@@ -2383,12 +2383,18 @@ form input[type=checkbox]:hover {
   background-color: rgba(0, 0, 0, 0);
   text-transform: uppercase;
   color: var(--dark);
-  font-size: clamp(1.1rem, 0.7994rem + 0.313vw, 1.2rem);
+  font-size: clamp(1rem, 0.3987rem + 0.626vw, 1.2rem);
   font-weight: 400;
   line-height: 1;
   padding: 0;
   padding-bottom: 5px;
   margin-bottom: 20px;
+}
+@media (max-width: 1199px) {
+  .departments-page .departments-tabs .nav-link {
+    padding-bottom: 0;
+    margin-bottom: 15px;
+  }
 }
 .departments-page .departments-tabs .nav-link:hover {
   color: var(--yellow);
@@ -2654,5 +2660,173 @@ form input[type=checkbox]:hover {
 }
 .systems-item-title a:hover {
   color: var(--yellow);
+}
+
+.base-page .departments-tabs {
+  margin-bottom: 2rem;
+}
+@media (max-width: 1399px) {
+  .base-page .departments-tabs {
+    margin-bottom: 1rem;
+  }
+}
+.base-page .search-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (max-width: 1599px) {
+  .base-page .search-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.base-page .search-wrapper input[type=text] {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  border: unset;
+  border-bottom: 2px solid var(--dark);
+  outline: none;
+  box-shadow: unset;
+}
+.base-page .base-items-list {
+  padding-right: 20px !important;
+}
+.base-page .base-items-list .department-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+.base-page .base-items-list .department-item::before {
+  content: "";
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/dnld_icon.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+  margin-right: 20px;
+  margin-top: -5px;
+}
+@media (max-width: 1599px) {
+  .base-page .base-items-list .department-item::before {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    margin-top: -3px;
+  }
+}
+@media (max-width: 1199px) {
+  .base-page .base-items-list .department-item::before {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+  }
+}
+.base-page .base-items-list .department-item > a {
+  font-weight: 500;
+  font-size: 0.9rem !important;
+  line-height: 1.2;
+}
+
+@media (max-width: 1399px) {
+  .video-item {
+    margin-bottom: 2rem;
+  }
+}
+
+.item-video-wrapper {
+  position: relative;
+}
+.item-video-wrapper video {
+  aspect-ratio: 369/237;
+  width: 369px;
+}
+
+.item-video-poster {
+  position: absolute;
+  z-index: 7;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.item-video-poster > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-video-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+.item-video-button:hover .round {
+  transform: scale(0.95);
+  transition: 0.2s linear;
+}
+.item-video-button:hover .button {
+  transform: scale(1.25);
+  transition: 0.2s linear;
+}
+.item-video-button .round {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 110px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transition: 0.2s linear;
+}
+@media (max-width: 991px) {
+  .item-video-button .round {
+    width: 95px;
+    height: 95px;
+  }
+}
+.item-video-button .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  transition: 0.2s linear;
+  position: relative;
+}
+@media (max-width: 991px) {
+  .item-video-button .button {
+    width: 55px;
+    height: 55px;
+  }
+}
+.item-video-button .button::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 20px;
+  height: 30px;
+  border-style: solid;
+  border-width: 15px 0 15px 20px;
+  border-color: transparent transparent transparent #2e97d8;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 991px) {
+  .item-video-button .button::before {
+    width: 15px;
+    height: 20px;
+    border-width: 10px 0 10px 13px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

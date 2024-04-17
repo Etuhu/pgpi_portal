@@ -21,12 +21,17 @@
             background-color: rgba(0, 0, 0, 0);
             text-transform: uppercase;
             color: var(--dark);
-            font-size: clamp(1.1rem, 0.7994rem + 0.313vw, 1.2rem);
+            // font-size: clamp(1.1rem, 0.7994rem + 0.313vw, 1.2rem);
+            font-size: clamp(1rem, 0.3987rem + 0.6260vw, 1.2rem);
             font-weight: 400;
             line-height: 1;
             padding: 0;
             padding-bottom: 5px;
             margin-bottom: 20px;
+            @media (max-width: 1199px) {
+                padding-bottom: 0;
+                margin-bottom: 15px;
+            }
             &:hover {
                 color: var(--yellow);
             }
