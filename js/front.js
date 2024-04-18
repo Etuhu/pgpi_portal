@@ -55,6 +55,10 @@ new Swiper(".video-swiper", {
 	spaceBetween: 15,
 	watchOverflow: true,
 	touchReleaseOnEdges: true,
+	navigation: {
+		nextEl: ".video-swiper-button-next",
+		prevEl: ".video-swiper-button-prev",
+	},
 	breakpoints: {
 		300: {
 			slidesPerView: 1,
@@ -63,13 +67,13 @@ new Swiper(".video-swiper", {
 			slidesPerView: 1,
 		},
 		768: {
-			slidesPerView: 2,
+			slidesPerView: 1,
 		},
 		992: {
-			slidesPerView: 2,
+			slidesPerView: 1.3,
 		},
 		1200: {
-			slidesPerView: 3,
+			slidesPerView: 1.5,
 		},
 		1400: {
 			slidesPerView: 3,
@@ -89,10 +93,12 @@ if (feedbackVideoWrappers.length > 0) {
     feedbackVideoWrappers.forEach(function(feedbackVideoWrapper, index){
         let feedbackVideoButton = feedbackVideoWrapper.querySelector(".item-video-button");
         let feedbackVideo = feedbackVideoWrapper.querySelector("video");
+        let feedbackTitle = feedbackVideoWrapper.querySelector(".item-video-title");
         let feedbackPoster = feedbackVideoWrapper.querySelector(".item-video-poster");
-        feedbackVideoButton.addEventListener("click", function () {
+        feedbackVideoWrapper.addEventListener("click", function () {
             feedbackVideoButton.classList.add("d-none");
             feedbackPoster.classList.add("d-none");
+            feedbackTitle.classList.add("d-none");
             feedbackVideo.play();
         });
     });

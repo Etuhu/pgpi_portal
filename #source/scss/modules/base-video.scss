@@ -1,13 +1,50 @@
+
+.base-page .video-wrapper {
+	margin-bottom: 3rem;
+}
+
+.base-page  :is(.video-wrapper, .title-wrapper) {
+	margin-left: 20px;
+	margin-right: 20px;
+	@media (max-width: 1599px) {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+.base-page  .title-wrapper {
+	padding-left: 10px;
+	margin-bottom:	2rem;
+	border-left: 3px solid var(--yellow);
+	.section-title {
+		font-size: clamp(1.1rem, 0.7994rem + 0.3130vw, 1.2rem);
+	}
+}
+
+.base-page .video-list {
+	position: relative;
+}
+
+.base-page .department-content {
+	margin-bottom: 3rem;
+}
+
 .video-item {
-	@media (max-width: 1399px) {
-		margin-bottom: 2rem;
+	cursor: pointer;
+	&:hover {
+		.button {
+			transform: scale(1.15);
+			transition: 0.2s linear;
+		}
 	}
 }
 .item-video-wrapper {
 	position: relative;
+	aspect-ratio: 363 / 205;
+	overflow: hidden;
 	video {
-		aspect-ratio: 369 / 237;
-		width: 369px;
+		aspect-ratio: 363 / 205;
+		width: 363px;
 	}
 }
 .item-video-poster {
@@ -22,6 +59,34 @@
 		height: 100%;
 		object-fit: cover;
 	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 8;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+}
+.item-video-title {
+	position: absolute;
+	width: fit-content;
+	max-width: 80%;
+	left: 10%;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 15;
+	color: white;
+	font-size: clamp(1.1rem, 0.7994rem + 0.3130vw, 1.2rem);
+	font-weight: 400;
+	line-height: 1;
+	margin: 0;
+	padding-left: 10px;
+	border-left: 2px solid var(--yellow);
+	padding-top: 3px;
+	padding-bottom: 3px;
 }
 .item-video-button {
 	display: flex;
@@ -29,57 +94,36 @@
 	justify-content: center;
 	position: absolute;
 	z-index: 10;
-	top: 50%;
-	left: 50%;
+	bottom: 12%;
+	right: 8%;
+	width: 50px;
+	height: 50px;
 	cursor: pointer;
-	transform: translate(-50%, -50%);
-	&:hover {
-		.round {
-			transform: scale(0.95);
-			transition: 0.2s linear;
-		}
-		.button {
-			transform: scale(1.25);
-			transition: 0.2s linear;
-		}
-	}
-	.round {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 110px;
-		height: 110px;
-		background-color: rgba(255, 255, 255, 0.3);
-		border-radius: 50%;
-		transition: 0.2s linear;
-		@media (max-width: 991px) {
-			width: 95px;
-			height: 95px;
-		}
+	@media (max-width: 1599px) {
+		width: 40px;
+		height: 40px;
+		bottom: 10%;
+		right: 6%;
 	}
 	.button {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 70px;
-		height: 70px;
-		background-color: rgba(255, 255, 255, 1);
+		width: 100%;
+		height: 100%;
+		background-color: var(--yellow);
 		border-radius: 50%;
 		transition: 0.2s linear;
 		position: relative;
-		@media (max-width: 991px) {
-			width: 55px;
-			height: 55px;
-		}
 		&::before {
 			position: absolute;
 			display: block;
 			content: "";
-			width: 20px;
-			height: 30px;
+			width: 10px;
+			height: 20px;
 			border-style: solid;
-			border-width: 15px 0 15px 20px;
-			border-color: transparent transparent transparent #2e97d8;
+			border-width: 10px 0 10px 15px;
+			border-color: transparent transparent transparent white;
 			top: 50%;
 			left: 55%;
 			transform: translate(-50%, -50%);
@@ -89,5 +133,49 @@
 				border-width: 10px 0 10px 13px;
 			}
 		}
+	}
+}
+
+.video-swiper-button {
+	color: var(--dark);
+	margin-top: 0;
+	top: 0;
+	height: 100%;
+	width: 200px;
+	@media (max-width: 1599px) {
+		width: 170px;
+	}
+	@media (max-width: 1399px) {
+		width: 150px;
+		color: var(--light);
+	}
+	@media (max-width: 1199px) {
+		width: 100px;
+	}
+	&.video-swiper-button-prev {
+		justify-content: flex-start;
+		left: 0;
+		padding-left: 10px;
+		right: unset;
+		background-image: linear-gradient(270.00deg, rgba(255, 252, 241, 0),rgb(255, 252, 241) 78.5%);
+		@media (max-width: 1399px) {
+			background-image: unset;
+		}
+	}
+	&.video-swiper-button-next {
+		justify-content: flex-end;
+		left: unset;
+		right: 0;
+		padding-right: 10px;
+		background-image: linear-gradient(90.00deg, rgba(255, 252, 241, 0),rgb(255, 252, 241) 78.5%);
+		@media (max-width: 1399px) {
+			background-image: unset;
+		}
+	}
+	&.swiper-button-disabled {
+		display: none;
+	}
+	&::after {
+		font-size: 2rem;
 	}
 }
