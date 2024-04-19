@@ -467,14 +467,22 @@ body.fixed {
   padding: 0 2% 2% 2%;
 }
 
+.container {
+  width: 100%;
+}
 @media (min-width: 1200px) and (max-width: 1920px) {
   .container {
-    max-width: 80%;
+    max-width: 1920px;
   }
 }
 @media (min-width: 1921px) {
   .container {
-    max-width: 1860px;
+    max-width: 2559px;
+  }
+}
+@media (min-width: 2560px) {
+  .container {
+    max-width: 2560px;
   }
 }
 
