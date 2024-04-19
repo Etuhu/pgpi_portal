@@ -1,0 +1,65 @@
+.results-page {
+    .box-post {
+        display: flex;
+        align-items: flex-start;
+        border-top: 2px solid var(--dark);
+        padding: 20px 50px;
+        .thumbnail-post {
+            box-shadow: 0 10px 7px -5px #D6D2C4;
+            width: clamp(100px, 30%, 200px);
+            flex-shrink: 0;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .description-post {
+            padding-left: 20px;
+            .info-post {
+                margin-bottom: 10px;
+            }
+            h2 {
+                font-size: clamp(1.1rem, 0.7994rem + 0.3130vw, 1.2rem);
+                font-weight: 400;
+                line-height: 1;
+                a {
+                    color: inherit;
+                    &:hover {
+                        color: var(--yellow);
+                    }
+                }
+            }
+            p, li {
+                font-size: 0.9rem;
+                font-weight: 300;
+            }
+            a {
+                color: var(--yellow);
+            }
+            .info-post {
+                .category-link {
+                    color: inherit;
+                    &:hover {
+                        color: var(--yellow);
+                    }
+                }
+            }
+        }
+    }
+    :is(.box-post, .inner-page-title) {
+        padding-left: 50px;
+        padding-right: 50px;
+        @media (max-width: 1920px) {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        @media (max-width: 1399px) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        @media (max-width: 991px) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}

@@ -1715,32 +1715,55 @@ form .form-body {
   }
 }
 form input[type=text],
-form input[type=password] {
+form input[type=password],
+form select {
   width: 100%;
   height: 42px;
   padding: 10px;
 }
 @media (max-width: 1920px) {
   form input[type=text],
-  form input[type=password] {
+  form input[type=password],
+  form select {
     height: 40px;
     padding: 8px;
   }
 }
 @media (max-width: 1599px) {
   form input[type=text],
-  form input[type=password] {
+  form input[type=password],
+  form select {
     height: 35px;
   }
 }
 @media (max-width: 1399px) {
   form input[type=text],
-  form input[type=password] {
+  form input[type=password],
+  form select {
     height: 30px;
+  }
+}
+form select {
+  font-size: 0.8rem;
+}
+form select option {
+  font-size: 0.8rem;
+  background-color: var(--yellow);
+}
+form textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 0.8rem;
+}
+@media (max-width: 1920px) {
+  form textarea {
+    padding: 13px;
   }
 }
 form input[type=text],
 form input[type=password],
+form select,
+form textarea,
 form .checkbox-label-wrapper {
   margin-bottom: 7%;
 }
@@ -2289,12 +2312,46 @@ form input[type=checkbox]:hover {
   text-decoration-line: underline;
 }
 
-.news-item-page .news-item-date {
+.news-item-page .news-item-date-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   margin-bottom: 2rem;
 }
 @media (max-width: 1399px) {
-  .news-item-page .news-item-date {
+  .news-item-page .news-item-date-block {
     margin-bottom: 1.5rem;
+  }
+}
+.news-item-page .news-item-date-block .news-item-category,
+.news-item-page .news-item-date-block .news-item-date {
+  font-size: 1rem;
+}
+@media (max-width: 1399px) {
+  .news-item-page .news-item-date-block .news-item-category,
+  .news-item-page .news-item-date-block .news-item-date {
+    font-size: clamp(0.8rem, 0.4994rem + 0.313vw, 0.9rem);
+  }
+}
+.news-item-page .news-item-date-block .news-item-category + .news-item-date {
+  position: relative;
+  padding-left: 10px;
+}
+@media (max-width: 1920px) {
+  .news-item-page .news-item-date-block .news-item-category + .news-item-date {
+    padding-left: 6px;
+  }
+}
+.news-item-page .news-item-date-block .news-item-category + .news-item-date::before {
+  content: "/";
+  color: var(--yellow);
+  font-size: inherit;
+  line-height: inherit;
+  padding-right: 10px;
+}
+@media (max-width: 1920px) {
+  .news-item-page .news-item-date-block .news-item-category + .news-item-date::before {
+    padding-right: 6px;
   }
 }
 .news-item-page .news-item-title {
@@ -2308,6 +2365,7 @@ form input[type=checkbox]:hover {
     margin-bottom: 1.5rem;
   }
 }
+
 .news-page .left-border-title {
   margin-bottom: 2rem;
 }
@@ -2330,15 +2388,35 @@ form input[type=checkbox]:hover {
     margin-bottom: 1.5rem;
   }
 }
-.news-page .news-archive-item-date {
-  font-size: clamp(0.75rem, 0.5997rem + 0.1565vw, 0.8rem);
-  font-weight: 400;
-  line-height: 1;
+.news-page .news-archive-item-date-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   margin-bottom: 10px;
 }
-@media (max-width: 1399px) {
-  .news-page .news-archive-item-date {
-    margin-bottom: 5px;
+.news-page .news-archive-item-date-block .news-archive-item-category,
+.news-page .news-archive-item-date-block .news-archive-item-date {
+  font-size: clamp(0.75rem, 0.5997rem + 0.1565vw, 0.8rem);
+}
+.news-page .news-archive-item-date-block .news-archive-item-category + .news-archive-item-date {
+  position: relative;
+  padding-left: 10px;
+}
+@media (max-width: 1920px) {
+  .news-page .news-archive-item-date-block .news-archive-item-category + .news-archive-item-date {
+    padding-left: 6px;
+  }
+}
+.news-page .news-archive-item-date-block .news-archive-item-category + .news-archive-item-date::before {
+  content: "/";
+  color: var(--yellow);
+  font-size: inherit;
+  line-height: inherit;
+  padding-right: 10px;
+}
+@media (max-width: 1920px) {
+  .news-page .news-archive-item-date-block .news-archive-item-category + .news-archive-item-date::before {
+    padding-right: 6px;
   }
 }
 .news-page .news-archive-item-title {
@@ -2926,5 +3004,233 @@ form input[type=checkbox]:hover {
 }
 .video-swiper-button::after {
   font-size: 2rem;
+}
+
+.faq-page :is(.inner-page-title, .faq-content-wrapper .faq-content) {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+@media (max-width: 1920px) {
+  .faq-page :is(.inner-page-title, .faq-content-wrapper .faq-content) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (max-width: 1399px) {
+  .faq-page :is(.inner-page-title, .faq-content-wrapper .faq-content) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media (max-width: 991px) {
+  .faq-page :is(.inner-page-title, .faq-content-wrapper .faq-content) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.faq-page .sidebar--info .sidebar-content {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 0;
+}
+
+.faq-wrapper .faq-content-wrapper .faq-content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media (max-width: 1920px) {
+  .faq-wrapper .faq-content-wrapper .faq-content {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .faq-wrapper .faq-content-wrapper .faq-content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+.faq-wrapper .faq-item .faq-item-title .faq-item-title-content .faq-item-link {
+  display: block;
+  position: relative;
+  color: inherit;
+  font-size: clamp(1.1rem, 0.7994rem + 0.313vw, 1.2rem);
+  font-weight: 500;
+  line-height: 100%;
+  padding: 19px 70px 16px 50px;
+  border-top: 2px solid rgba(67, 63, 61, 0.3);
+}
+@media (max-width: 1920px) {
+  .faq-wrapper .faq-item .faq-item-title .faq-item-title-content .faq-item-link {
+    padding: 20px 70px 20px 40px;
+  }
+}
+@media (max-width: 1799px) {
+  .faq-wrapper .faq-item .faq-item-title .faq-item-title-content .faq-item-link {
+    padding: 18px 70px 18px 40px;
+  }
+}
+@media (max-width: 1399px) {
+  .faq-wrapper .faq-item .faq-item-title .faq-item-title-content .faq-item-link {
+    padding: 16px 50px 16px 30px;
+  }
+}
+@media (max-width: 991px) {
+  .faq-wrapper .faq-item .faq-item-title .faq-item-title-content .faq-item-link {
+    padding: 13px 40px 13px 15px;
+  }
+}
+.faq-wrapper .faq-item .faq-item-title .faq-item-title-content .faq-item-link::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  width: 42px;
+  height: 42px;
+  transition: 0.3s ease;
+}
+@media (max-width: 1920px) {
+  .faq-wrapper .faq-item .faq-item-title .faq-item-title-content .faq-item-link::before {
+    width: 35px;
+    height: 35px;
+  }
+}
+@media (max-width: 1399px) {
+  .faq-wrapper .faq-item .faq-item-title .faq-item-title-content .faq-item-link::before {
+    width: 30px;
+    height: 30px;
+    right: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .faq-wrapper .faq-item .faq-item-title .faq-item-title-content .faq-item-link::before {
+    right: 0;
+  }
+}
+.faq-wrapper .faq-item .faq-item-title .faq-item-title-content .faq-item-link::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 46%;
+  transform: translateY(-50%) rotate(315deg);
+  right: 35px;
+  width: 11px;
+  height: 11px;
+  border-left: 2px solid var(--dark);
+  border-bottom: 2px solid var(--dark);
+  transition: 0.3s ease;
+}
+@media (max-width: 1920px) {
+  .faq-wrapper .faq-item .faq-item-title .faq-item-title-content .faq-item-link::after {
+    width: 10px;
+    height: 10px;
+    right: 32px;
+  }
+}
+@media (max-width: 1399px) {
+  .faq-wrapper .faq-item .faq-item-title .faq-item-title-content .faq-item-link::after {
+    width: 9px;
+    height: 9px;
+    right: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .faq-wrapper .faq-item .faq-item-title .faq-item-title-content .faq-item-link::after {
+    right: 10px;
+  }
+}
+.faq-wrapper .faq-item .faq-item-title .faq-item-title-content .faq-item-link[aria-expanded=true],
+.faq-wrapper .faq-item .faq-item-title .faq-item-title-content .faq-item-link:hover {
+  border-color: var(--yellow);
+  color: var(--yellow);
+}
+.faq-wrapper .faq-item .faq-item-title .faq-item-title-content .faq-item-link[aria-expanded=true]::before,
+.faq-wrapper .faq-item .faq-item-title .faq-item-title-content .faq-item-link:hover::before {
+  transition: 0.3s ease;
+}
+.faq-wrapper .faq-item .faq-item-title .faq-item-title-content .faq-item-link[aria-expanded=true]::after,
+.faq-wrapper .faq-item .faq-item-title .faq-item-title-content .faq-item-link:hover::after {
+  border-color: var(--yellow);
+  transition: 0.3s ease;
+}
+.faq-wrapper .faq-item .faq-item-title .faq-item-title-content .faq-item-link[aria-expanded=true]::before {
+  transition: 0.3s ease;
+}
+.faq-wrapper .faq-item .faq-item-title .faq-item-title-content .faq-item-link[aria-expanded=true]::after {
+  border-color: var(--yellow);
+  transform: rotate(135deg);
+  transition: 0.3s ease;
+}
+.faq-wrapper .faq-item:first-child .faq-item-title .faq-item-title-content {
+  border-top: unset;
+}
+
+.results-page .box-post {
+  display: flex;
+  align-items: flex-start;
+  border-top: 2px solid var(--dark);
+  padding: 20px 50px;
+}
+.results-page .box-post .thumbnail-post {
+  box-shadow: 0 10px 7px -5px #D6D2C4;
+  width: clamp(100px, 30%, 200px);
+  flex-shrink: 0;
+}
+.results-page .box-post .thumbnail-post img {
+  width: 100%;
+  height: auto;
+}
+.results-page .box-post .description-post {
+  padding-left: 20px;
+}
+.results-page .box-post .description-post .info-post {
+  margin-bottom: 10px;
+}
+.results-page .box-post .description-post h2 {
+  font-size: clamp(1.1rem, 0.7994rem + 0.313vw, 1.2rem);
+  font-weight: 400;
+  line-height: 1;
+}
+.results-page .box-post .description-post h2 a {
+  color: inherit;
+}
+.results-page .box-post .description-post h2 a:hover {
+  color: var(--yellow);
+}
+.results-page .box-post .description-post p, .results-page .box-post .description-post li {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+.results-page .box-post .description-post a {
+  color: var(--yellow);
+}
+.results-page .box-post .description-post .info-post .category-link {
+  color: inherit;
+}
+.results-page .box-post .description-post .info-post .category-link:hover {
+  color: var(--yellow);
+}
+.results-page :is(.box-post, .inner-page-title) {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+@media (max-width: 1920px) {
+  .results-page :is(.box-post, .inner-page-title) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (max-width: 1399px) {
+  .results-page :is(.box-post, .inner-page-title) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media (max-width: 991px) {
+  .results-page :is(.box-post, .inner-page-title) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
