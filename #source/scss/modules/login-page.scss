@@ -1,0 +1,63 @@
+.login-page {
+    position: relative;
+    > .container,
+    .page-wrapper {
+        height: 100%;
+    }
+    .page-wrapper {
+        @media (max-width: 991px) {
+            gap: 150px 0;
+        }
+    }
+    .decor {
+        position: absolute;
+        &--top {
+            top: -12%;
+            left: 10%;
+            img {
+                width: clamp(300px, 17vw, 450px);
+            }
+        }
+        &--center {
+            top: 55%;
+            left: 50%;
+            @media (max-width: 991px) {
+                top: 43%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            img {
+                width: clamp(60px, 3.5vw, 100px);
+            }
+        }
+    }
+    .login-logo-wrapper,
+    .login-form-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .login-logo-wrapper {
+        @media (max-width: 991px) {
+            align-items: flex-end;
+        }
+        img {
+            width: clamp(375px, 23vw, 595px);
+        }
+    }
+    .login-form-wrapper {
+        @media (max-width: 991px) {
+            align-items: flex-start;
+        }
+    }
+    .authorization-form {
+        width: clamp(300px, 14vw, 367px);
+        box-shadow: unset;
+        margin-bottom: 0;
+        .form-title {
+            background-color: rgb(245, 245, 245);
+            box-shadow: unset;
+            color: var(--dark);
+        }
+    }
+}

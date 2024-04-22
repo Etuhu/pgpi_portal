@@ -438,6 +438,10 @@ body .fader {
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
 }
+body.dark {
+  background-color: var(--dark);
+  background-image: url(../img/mountains_dark_bg.png);
+}
 body.fixed {
   overflow: hidden;
   position: relative;
@@ -3240,5 +3244,71 @@ form input[type=checkbox]:hover {
     padding-left: 15px;
     padding-right: 15px;
   }
+}
+
+.login-page {
+  position: relative;
+}
+.login-page > .container,
+.login-page .page-wrapper {
+  height: 100%;
+}
+@media (max-width: 991px) {
+  .login-page .page-wrapper {
+    gap: 150px 0;
+  }
+}
+.login-page .decor {
+  position: absolute;
+}
+.login-page .decor--top {
+  top: -12%;
+  left: 10%;
+}
+.login-page .decor--top img {
+  width: clamp(300px, 17vw, 450px);
+}
+.login-page .decor--center {
+  top: 55%;
+  left: 50%;
+}
+@media (max-width: 991px) {
+  .login-page .decor--center {
+    top: 43%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.login-page .decor--center img {
+  width: clamp(60px, 3.5vw, 100px);
+}
+.login-page .login-logo-wrapper,
+.login-page .login-form-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 991px) {
+  .login-page .login-logo-wrapper {
+    align-items: flex-end;
+  }
+}
+.login-page .login-logo-wrapper img {
+  width: clamp(375px, 23vw, 595px);
+}
+@media (max-width: 991px) {
+  .login-page .login-form-wrapper {
+    align-items: flex-start;
+  }
+}
+.login-page .authorization-form {
+  width: clamp(300px, 14vw, 367px);
+  box-shadow: unset;
+  margin-bottom: 0;
+}
+.login-page .authorization-form .form-title {
+  background-color: rgb(245, 245, 245);
+  box-shadow: unset;
+  color: var(--dark);
 }
 /*# sourceMappingURL=style.css.map */

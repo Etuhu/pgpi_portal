@@ -61,6 +61,10 @@ body {
         opacity: 0;
         backdrop-filter: blur(5px);
     }
+    &.dark {
+        background-color: var(--dark);
+        background-image: url(../img/mountains_dark_bg.png);
+    }
     &.fixed {
         overflow: hidden;
         position: relative;
